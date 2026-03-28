@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>NS Electrical - Expert Electrical Contractors</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes slideInLeft {
+            from { opacity: 0; transform: translateX(-50px); }
+            to   { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes slideInRight {
+            from { opacity: 0; transform: translateX(50px); }
+            to   { opacity: 1; transform: translateX(0); }
+        }
+        .animate-slideInLeft { animation: slideInLeft 0.8s ease-out; }
+        .animate-slideInRight { animation: slideInRight 0.8s ease-out; }
+        .navbar { transition: all 0.3s ease; }
+        .navbar.scrolled {
+            background-color: rgba(0, 0, 0, 0.95);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Navigation -->
+    <nav class="navbar fixed top-0 w-full z-50 bg-gradient-to-r from-blue-600 to-blue-800 text-white shadow-lg">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-3xl font-bold">NS Electrical</div>
+            <ul class="hidden md:flex space-x-8">
+                <li><a href="#home" class="hover:text-yellow-300 transition-colors text-lg">Home</a></li>
+                <li><a href="#about" class="hover:text-yellow-300 transition-colors text-lg">About</a></li>
+                <li><a href="#services" class="hover:text-yellow-300 transition-colors text-lg">Services</a></li>
+                <li><a href="#portfolio" class="hover:text-yellow-300 transition-colors text-lg">Portfolio</a></li>
+                <li><a href="#contact" class="hover:text-yellow-300 transition-colors text-lg">Contact</a></li>
+            </ul>
+            <div class="md:hidden">
+                <button id="menu-toggle" class="text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-blue-700 text-white p-4">
+            <ul class="space-y-4">
+                <li><a href="#home" class="block hover:text-yellow-300">Home</a></li>
+                <li><a href="#about" class="block hover:text-yellow-300">About</a></li>
+                <li><a href="#services" class="block hover:text-yellow-300">Services</a></li>
+                <li><a href="#portfolio" class="block hover:text-yellow-300">Portfolio</a></li>
+                <li><a href="#contact" class="block hover:text-yellow-300">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative h-screen flex items-center justify-center bg-gradient-to-br from-blue-500 to-purple-600 text-white">
+        <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+        <div class="text-center z-10 max-w-4xl mx-auto px-6 animate-slideInRight">
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white to-yellow-200">
+                NS Electrical
+            </h1>
+            <h2 class="text-2xl md:text-4xl font-semibold mb-8">Powering Your World with Expertise</h2>
+            <p class="text-xl md:text-2xl mb-8 leading-relaxed">
+                Comprehensive Electrical Solutions for Residential, Commercial, and Industrial Projects
+            </p>
+            <div class="space-x-4">
+                <a href="#services" class="bg-yellow-500 text-black px-8 py-3 rounded-lg text-lg font-semibold hover:bg-yellow-400 transition-all transform hover:scale-105">Explore Services</a>
+                <a href="#contact" class="border-2 border-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-white hover:text-blue-600 transition-all">Get Quote</a>
+            </div>
+        </div>
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2">
+            <a href="#about" class="animate-bounce">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <div class="lg:w-1/2 animate-slideInLeft">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/44bc0ea4-95bc-4858-86cf-809217fd481a.png" alt="Professional electrical contractors in safety gear working on a wiring panel in a modern home setting with tools around them" class="rounded-lg shadow-xl w-full h-auto" />
+                </div>
+                <div class="lg:w-1/2 text-center lg:text-left">
+                    <h2 class="text-4xl font-bold text-gray-800 mb-8">About NS Electrical</h2>
+                    <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                        With over 10 years of dedicated experience in electrical services, NS Electrical has established itself as the trusted name in electrical contracting. Our skilled team specializes in delivering safe, efficient, and high-quality electrical solutions tailored to meet the unique needs of each client.
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+                        <div class="text-center p-4 bg-blue-50 rounded-lg">
+                            <div class="text-3xl font-bold text-blue-600 mb-2">10+</div>
+                            <div class="text-gray-700 font-semibold">Years Experience</div>
+                        </div>
+                        <div class="text-center p-4 bg-green-50 rounded-lg">
+                            <div class="text-3xl font-bold text-green-600 mb-2">500+</div>
+                            <div class="text-gray-700 font-semibold">Projects Completed</div>
+                        </div>
+                    </div>
+                    <div class="mt-8">
+                        <p class="text-gray-600 italic">"Safety first, quality always - our commitment to excellence."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Our Electrical Services</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    From lighting installations to complex industrial systems, we handle all your electrical needs with precision and expertise.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="service-card bg-white p-8 rounded-xl shadow-lg transition-all duration-300">
+                    <div class="w-20 h-20 bg-blue-500 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/812f5be4-a074-46cd-9f5d-ce8a55a833dd.png" alt="Icon showing a modern showroom interior with electrical lighting and display shelves" />
+                    </div>
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4 text-center">Showroom Electrical Work</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Expert electrical installations and maintenance for retail showrooms, ensuring optimal lighting, display aesthetics, and energy efficiency.
+                    </p>
+                </div>
+                <div class="service-card bg-white p-8 rounded-xl shadow-lg transition-all duration-300">
+                    <div class="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/4ea3e0bb-ee90-425e-b76c-f669473f6db0.png" alt="Icon depicting a new construction building with electrical wires and power lines connected to it" />
+                    </div>
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4 text-center">New Building Electrical</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Complete electrical systems for new constructions, including wiring, panel installations, lighting setup, and electrical code compliance.
+                    </p>
+                </div>
+                <div class="service-card bg-white p-8 rounded-xl shadow-lg transition-all duration-300">
+                    <div class="w-20 h-20 bg-yellow-500 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/184b1d85-73fb-4ddb-a3cf-75f31519173d.png" alt="Icon showing decorative light fixtures like chandeliers and LED strips for interior decorating" />
+                    </div>
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4 text-center">Decoration Light Repairing</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Restoration and repair of decorative lighting fixtures, ensuring they maintain their aesthetic appeal and functionality.
+                    </p>
+                </div>
+                <div class="service-card bg-white p-8 rounded-xl shadow-lg transition-all duration-300">
+                    <div class="w-20 h-20 bg-red-500 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/2c5b9c1c-6399-416e-9cc2-4c56957cf671.png" alt="Icon representing ceiling and exhaust fans with electrical connections and motor parts" />
+                    </div>
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4 text-center">Electrical Fans</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Installation, repair, and maintenance of all types of electrical fans, from ceiling fans to industrial ventilation systems.
+                    </p>
+                </div>
+                <div class="service-card bg-white p-8 rounded-xl shadow-lg transition-all duration-300 md:col-span-2 lg:col-span-1">
+                    <div class="w-20 h-20 bg-purple-500 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/67ecb364-6c15-419b-9adf-735e6a43984e.png" alt="Icon depicting a residential house outline with electrical outlets and wires visible on the facade" />
+                    </div>
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4 text-center">House Maintenance</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Comprehensive electrical maintenance for residential properties, including safety inspections, repairs, and upgrades.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Our Work</h2>
+                <p class="text-xl text-gray-600">
+                    Showcasing our recent electrical projects and installations
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="portfolio-item overflow-hidden rounded-lg shadow-lg animate-fadeInUp">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/1519d76b-d347-448d-8342-2ae0edf2e44c.png" alt="Elegant showroom with decorative LED lighting installations, modern display shelves, and illuminated signage highlighting electrical work" class="w-full h-64 object-cover hover:scale-110 transition-transform duration-300" />
+                    <div class="p-6 bg-white">
+                        <h3 class="text-xl font-semibold mb-2">Showroom Lighting Upgrade</h3>
+                        <p class="text-gray-600">Complete LED lighting system for luxury boutique showroom.</p>
+                    </div>
+                </div>
+                <div class="portfolio-item overflow-hidden rounded-lg shadow-lg animate-fadeInUp" style="animation-delay: 0.2s;">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/26c90029-243a-46bb-a01f-7332c0f204b2.png" alt="New construction site showing electrical wiring installation in progress with workers connecting panels and fixtures" class="w-full h-64 object-cover hover:scale-110 transition-transform duration-300" />
+                    <div class="p-6 bg-white">
+                        <h3 class="text-xl font-semibold mb-2">Commercial Building Wiring</h3>
+                        <p class="text-gray-600">Full electrical setup for 50,000 sq ft commercial space.</p>
+                    </div>
+                </div>
+                <div class="portfolio-item overflow-hidden rounded-lg shadow-lg animate-fadeInUp" style="animation-delay: 0.4s;">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/5d9fca43-84db-43dd-9b1e-d837bed7c4c9.png" alt="Modern living room with repaired decorative pendant lights and chandeliers hanging from ceiling" class="w-full h-64 object-cover hover:scale-110 transition-transform duration-300" />
+                    <div class="p-6 bg-white">
+                        <h3 class="text-xl font-semibold mb-2">Decorative Lighting Restoration</h3>
+                        <p class="text-gray-600">Restoration of antique chandelier and modern LED fixtures.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Why Choose NS Electrical?</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div class="animate-fadeInUp">
+                    <div class="w-20 h-20 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/69446b4c-2508-4419-9bb8-2bc96584cf45.png" alt="Icon showing a certification badge with a checkmark indicating professional electrical licensing" />
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4">Certified & Licensed</h3>
+                    <p class="text-gray-600">Fully licensed and insured electrical contractors with all necessary certifications.</p>
+                </div>
+                <div class="animate-fadeInUp" style="animation-delay: 0.2s;">
+                    <div class="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/bea53553-7a24-478e-b535-9d8567a52770.png" alt="Icon depicting dollar signs with arrows indicating competitive pricing and cost savings" />
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4">Best Price Guarantee</h3>
+                    <p class="text-gray-600">Competitive rates without compromising on quality and safety standards.</p>
+                </div>
+                <div class="animate-fadeInUp" style="animation-delay: 0.4s;">
+                    <div class="w-20 h-20 bg-yellow-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/5ed9d159-490d-4f21-a768-8136dfc2ff93.png" alt="Icon showing a clock with arrows indicating 24-hour service availability" />
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4">24/7 Emergency Service</h3>
+                    <p class="text-gray-600">Round-the-clock emergency electrical repairs and support when you need it most.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Contact Us</h2>
+                <p class="text-xl text-gray-600">Ready to power up your project? Get in touch with NS Electrical today.</p>
+            </div>
+            <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-3xl font-semibold mb-8 text-gray-800">Get a Free Electrical Estimate</h3>
+                    <div class="space-y-6 mb-8">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center mr-4">
+                                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/eafb942d-c430-4aca-86a6-4b52b4705531.png" alt="Icon showing a telephone receiver with waves indicating phone call functionality" />
+                            </div>
+                            <div>
+                                <div class="font-semibold text-lg">Call Us</div>
+                                <div class="text-gray-600">(9967597126)</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center mr-4">
+                                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/0f899ce4-0ce9-46b1-bd05-9df29fb509fa.png" alt="Icon depicting an email envelope to represent email communication" />
+                            </div>
+                            <div>
+                                <div class="font-semibold text-lg">Email Us</div>
+                                <div class="text-gray-600">info@nselectrical.com</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center mr-4">
+                                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/d3c1f808-3c9b-4505-ac62-c840e6e2a948.png" alt="Icon showing a location pin on a map for address representation" />
+                            </div>
+                            <div>
+                                <div class="font-semibold text-lg">Visit Our Office</div>
+                                <div class="text-gray-600">Malad West Mumbai<br>Mumbai City, EC 12345</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-gray-100 p-6 rounded-lg">
+                        <h4 class="text-xl font-semibold mb-4">Service Areas</h4>
+                        <p class="text-gray-600">We serve residential, commercial, and industrial clients across the Greater Circuit City area and surrounding regions.</p>
+                    </div>
+                </div>
+                <div>
+                    <form class="bg-gray-50 p-8 rounded-lg shadow-lg" action="#" method="post" onsubmit="submitForm(event)">
+                        <div class="mb-6">
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
+                            <input type="text" id="name" name="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" required>
+                        </div>
+                        <div class="mb-6">
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
+                            <input type="email" id="email" name="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" required>
+                        </div>
+                        <div class="mb-6">
+                            <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                        <div class="mb-6">
+                            <label for="service" class="block text-sm font-medium text-gray-700 mb-2">Service Needed</label>
+                            <select id="service" name="service" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                <option value="">Select Service</option>
+                                <option value="showroom">Showroom Electrical Work</option>
+                                <option value="new-building">New Building Electrical</option>
+                                <option value="decoration">Decoration Light Repairing</option>
+                                <option value="fans">Electrical Fans</option>
+                                <option value="maintenance">House Maintenance</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="mb-6">
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Project Details</label>
+                            <textarea id="message" name="message" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Tell us about your electrical project..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-blue-600 text-white py-3 px-6 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-colors">Submit Request</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="text-2xl font-bold mb-4">NS Electrical</div>
+                    <p class="text-gray-400 mb-4">Over 10 years of powering excellence in electrical services.</p>
+                    <p class="text-gray-400">© 2024 NS Electrical. All rights reserved.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Services</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>Showroom Electrical</li>
+                        <li>New Building Wiring</li>
+                        <li>Decoration Light Repair</li>
+                        <li>Electrical Fans</li>
+                        <li>House Maintenance</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#home" class="hover:text-white transition-colors">Home</a></li>
+                        <li><a href="#about" class="hover:text-white transition-colors">About</a></li>
+                        <li><a href="#services" class="hover:text-white transition-colors">Services</a></li>
+                        <li><a href="#portfolio" class="hover:text-white transition-colors">Portfolio</a></li>
+                        <li><a href="#contact" class="hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Get Connected</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors">
+                            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/4615166b-6b1d-4bee-bbbc-0b70c938da93.png" alt="Facebook social media icon represented as the letter F in a blue circle" />
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors">
+                            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/fc8bc3b7-6994-4176-8ac0-6fcfb8ad2f25.png" alt="LinkedIn social media icon with the interlocking letters IN in a blue tone" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuToggle.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Fade in animation for portfolio items
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.portfolio-item').forEach(function(item) {
+                item.style.opacity = '0';
+                item.style.transform = 'translateY(20px)';
+                item.style.transition = 'opacity 0.5s, transform 0.5s';
+                observer.observe(item);
+            });
+        });
+
+        // Form submission handler
+        function submitForm(event) {
+            event.preventDefault();
+            alert('Thank you for your inquiry! We will contact you within 24 hours.');
+            event.target.reset();
+        }
+
+        // Add animation classes to other elements that should animate on scroll
+        const animateElements = document.querySelectorAll('.animate-fadeInUp');
+        animateElements.forEach((element, index) => {
+            element.style.opacity = '0';
+            element.style.transform = 'translateY(30px)';
+            element.style.transition = opacity 0.6s ease-out ${index * 0.2}s, transform 0.6s ease-out ${index * 0.2}s;
+
+            observer.observe(element);
+        });
+
+        // Force animation for already visible elements
+        setTimeout(() => {
+            animateElements.forEach(element => {
+                const rect = element.getBoundingClientRect();
+                if (rect.top < window.innerHeight && rect.bottom > 0) {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }
+            });
+        }, 100);
+    </script>
+</body>
+</html>
